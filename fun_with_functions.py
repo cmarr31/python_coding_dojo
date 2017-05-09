@@ -8,3 +8,14 @@ def odd_even():
 			odd_num = iteration + "This is an odd number."
 			print odd_num
 odd_even()
+
+
+def multiply(lst, num):
+	new_lst = []
+	for x in lst:
+		new_lst.append(x * num)
+	print new_lst
+	return new_lst
+		
+
+multiply([2,10,20], 5)
