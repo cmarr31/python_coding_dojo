@@ -1,5 +1,4 @@
 def filter_by_type(x):
-	dt = type(x)
 	if (isinstance(x, int) == True):
 		if (x >= 100):
 			print "That's a big number!"
