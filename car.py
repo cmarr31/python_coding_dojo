@@ -11,11 +11,13 @@ class Car(object):
 		self.display_all()
 
 	def display_all(self):
-		print self.price
-		print self.speed
-		print self.fuel
-		print self.mileage
-		print "Tax: " + str(self.tax)
+		car_info = ""
+		car_info += "Price: " + str(self.price) + "   "
+		car_info += "Speed: " + str(self.speed) + "   "
+		car_info += "Fuel: " + str(self.fuel) + "   "
+		car_info += "Mileage: " + str(self.mileage) + "   "
+		car_info += "Tax: " + str(self.tax) + "   "
+		print car_info
 		return self
 
-mustang = Car("Price: 5000", "Speed: 160", "Fuel: Empty", "Mileage: 25mpg")
+mustang = Car(5000, 160, 0, 25)
