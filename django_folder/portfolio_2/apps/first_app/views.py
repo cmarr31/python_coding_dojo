@@ -7,3 +7,9 @@ def index(request):
 
 def testimonials(request):
 	return render(request, 'first_app/testimonials.html')
+
+def about(request):
+	return render(request, 'first_app/about.html')
+
+def projects(request):
+	return render(request, 'first_app/projects.html')
