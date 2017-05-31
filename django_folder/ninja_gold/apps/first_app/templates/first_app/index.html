@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja Money</title>
+</head>
+<body>
+	<p>Your Gold:</p>
+	<div>
+		<p></p>
+	</div>
+
+	<div>
+		<form action="/process_money/" method="post">	
+			{% csrf_token %}
+			<h5>Farm</h5>
+			<p>(earns 10-20 golds)</p>
+  			<button type="submit" formaction="/process_money/">Find Gold!</button>
+		</form>
+	</div>
+
+	<div>
+		<form action="/process_money/" method="post">
+			{% csrf_token %}
+			<h5>Cave</h5>
+			<p>(earns 5-10 golds)</p>
+  			<button type="submit" formaction="/process_money/">Find Gold!</button>
+		</form>
+	</div>
+
+	<div>
+		<form action="/process_money/" method="post">	
+			{% csrf_token %}
+			<h5>House</h5>
+			<p>(earns 2-5 golds)</p>
+  			<button type="submit" formaction="/process_money/">Find Gold!</button>
+		</form>
+	</div>
+
+	<div>
+		<form action="/process_money/" method="post">	
+			{% csrf_token %}
+			<h5>Casino</h5>
+			<p>(earns/takes 0-50 golds)</p>
+  			<button type="submit" formaction="/process_money/">Find Gold!</button>
+		</form>
+	</div>
+
+	<p>Activities:</p>
+	<div>
+		
+	</div>
+
+
+</body>
+</html>
