@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Random Word Generator</title>
+</head>
+<body>
+	<h1>Random Word Generator</h1>
+	<div>
+		{% if attempts %}
+			{% for att in attempts %}
+			<p>Attempt #{{att.attempt}}</p>
+			{% endfor %}
+		{% endif %}	
+	</div>
+	<div>
+		{% if words %}
+			{% for wrd in words %}
+			<p>{{wrd.word}}</p>
+			{% endfor %}
+		{% endif %}	
+	</div>
+	<form action="/" method="post">
+		{% csrf_token %}
+    	<label for="refresh"></label>
+    	<input id="refresh" type="text" name="refresh" value="{{ context.word }}">
+    	<input type="submit" value="OK">
+	</form>
+
+</body>
+</html>
+
+
+
+
+
