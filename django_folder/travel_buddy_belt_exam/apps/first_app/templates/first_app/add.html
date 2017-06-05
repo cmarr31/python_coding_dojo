@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Plan</title>
+</head>
+<body>
+	<h2>Add a Trip</h2>
+
+	<div>
+		<p>Destination:</p>
+		<input type="text" name="destination" value="destination"><br>
+		<p>Description:</p>
+		<input type="text" name="description" value="description"><br>
+		<p>Travel Date From: </p>
+		<input type="text" name="date_from" value="date_from"><br>
+		<p>Travel Date To: </p>
+		<input type="text" name="date_to" value="date_to"><br>
+	</div>
+
+
+	<div>
+		
+	</div>
+
+
+  <a href="{% url 'my_app:landing_page' %}">Home</a> |
+  <a href="{% url 'my_app:logout' %}">Logout</a>
+  {% if messages %}
+    {% for message in messages %}
+    <p class="error">{{ message }}</p>
+    {% endfor %}
+  {% endif %}
+  <h4>Add a New Travel Destination</h4>
+  <form action="{% url 'my_app:process_add' %}" method="post">
+    {% csrf_token %}
+    <div class="box">
+      <label for="title">Place:</label>
+      <input type="text" name="title" value="">
+      <br>
+      <label>Destination:</label>
+      <br>
+      <input class="button" type="submit" name="" value="Add">
+    </div>
+  </form>
+</body>
+</html>
